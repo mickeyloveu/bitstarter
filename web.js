@@ -7,7 +7,7 @@ app.get('/', function(request, response) {
        if (err) throw err;
        console.log(data);
        });
-   response.send(con);
+   response.send(buf.toString('utf8', 0, con));
 });
 
 var port = process.env.PORT || 5000;
